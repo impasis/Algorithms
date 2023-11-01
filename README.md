@@ -1,4 +1,4 @@
-### Algorithms
+#### Algorithms
 
 ## 1. Числа Фибоначчи
 
@@ -375,7 +375,7 @@ YES
 NO
 ```
 
-### [Решение](binnary search/A.cpp)
+### [Решение](binsearch/A.cpp)
 
 ## 14. Мутанты
 
@@ -411,7 +411,7 @@ NO
 0
 ```
 
-### [Решение](binnary search/F.cpp)
+### [Решение](binsearch/F.cpp)
 
 ## 15. Очень Легкая Задача
 
@@ -435,7 +435,7 @@ NO
 4
 ```
 
-### [Решение](binnary search/B.cpp)
+### [Решение](binsearch/B.cpp)
 
 ## 16. Провода
 
@@ -465,7 +465,7 @@ NO
 200
 ```
 
-### [Решение](binnary search/C.cpp)
+### [Решение](binsearch/C.cpp)
 
 ## 17. Коровы - в стойла
 
@@ -493,7 +493,7 @@ NO
 9
 ```
 
-### [Решение](binnary search/D.cpp)
+### [Решение](binsearch/D.cpp)
 
 ## 18. Дипломы
 
@@ -522,7 +522,7 @@ NO
 9
 ```
 
-### [Решение](binnary search/E.cpp)
+### [Решение](binsearch/E.cpp)
 
 ## 19. Стек с защитой от ошибок
 
