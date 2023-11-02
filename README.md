@@ -1,4 +1,4 @@
-#### Algorithms
+# Algorithms
 
 ## 1. Числа Фибоначчи
 
