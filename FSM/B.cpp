@@ -1,29 +1,43 @@
 #include <iostream>
-#include <string>
+#include <cctype>
 
-using namespace std;\
+using namespace std;
 
-int main()
-{
-	string st;
-	getline(cin, st);
-	int ans = 0;
+bool check(string word) {
+    if (word.empty()) {
+        return false;
+    }
+    if (!(isalpha(word[0]) || word[0] == '_')) {
+        return false;
+    }
+    for (char el : word.substr(1)) {
+        if (!(isalnum(el) || el == '_')) {
+            return false;
+        }
+    }
+    return true;
+}
 
-	for (int i = 0; i < st.length(); i++){
-		if (st[i] == ':' || st[i] == ';'){
-			int j = i + 1;
-			while (j < st.length() && st[j] == '-')
-				j++;
+int main() {
+    string st;
+    getline(cin, st);
 
-			if (j < st.length()){
-				if (st[j] == '(' || st[j] == ')' || st[j] == '[' || st[j] == ']'){
-					ans++;
-					i = j;
-				}
-			}
-		}
-	}
+    string new_str;
+    int cnt = 0;
 
-	cout << ans << endl;
-	return 0;
+    for (char el : st) {
+        if (isalnum(el) || el == '_')
+            new_str += el;
+        else {
+            if (check(new_str))
+                cnt++;
+            new_str = "";
+        }
+    }
+
+    if (check(new_str)) 
+        cnt++;
+
+    cout << cnt << endl;
+    return 0;
 }

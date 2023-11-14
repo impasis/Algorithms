@@ -1,32 +1,26 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
-bool f(char sym)
-{
-	string syms = ".,!? ";
-	for (int i = 0; i < 5; i++)
-		if (sym == syms[i]) return true;
-	return false;
-}
+using namespace std;\
 
 int main()
 {
-	string st, nw = "";
+	string st;
 	getline(cin, st);
-	st += "  ";
 	int ans = 0;
 
-	for (int i = 0; i < st.length() - 1; i++){
-		if (f(st[i]) && nw != ""){
-			ans++;
-			nw = "";
-		}
+	for (int i = 0; i < st.length(); i++){
+		if (st[i] == ':' || st[i] == ';'){
+			int j = i + 1;
+			while (j < st.length() && st[j] == '-')
+				j++;
 
-		else if (!f(st[i])){
-			if (st[i] == '-' && (!f(st[i + 1])) && nw != "" || st[i] != '-')
-				nw += st[i];
+			if (j < st.length()){
+				if (st[j] == '(' || st[j] == ')' || st[j] == '[' || st[j] == ']'){
+					ans++;
+					i = j;
+				}
+			}
 		}
 	}
 
